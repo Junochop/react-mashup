@@ -7,7 +7,10 @@ class Animals extends React.Component {
     const {mashups} = this.props;
     const animalsItemComponents = mashups.map((item) => {
       return (
-        <li key = {item.id}>{item.name}</li>
+        <div key={item.id} class='img-thumbnail'>{item.name}
+          <img class='animal-image' src={item.imgUrl} alt="card"/>
+          <p>{item.description}</p>
+        </div>
       );
     });
     return (

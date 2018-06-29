@@ -19,7 +19,7 @@ class App extends Component {
 
     mashupRequests.getRequest()
       .then((mashups) => {
-        this.setState({ mashups});
+        this.setState({ mashups: mashups});
       })
       .catch((err) => {
         console.error('error', err);
